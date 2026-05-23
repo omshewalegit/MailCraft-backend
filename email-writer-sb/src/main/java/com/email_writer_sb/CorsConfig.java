@@ -1,5 +1,4 @@
 package com.email_writer_sb;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -11,7 +10,8 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
             .allowedOrigins(
                 "http://localhost:5173",
-                "https://mail-craft-frontend.vercel.app"
+                "https://mail-craft-frontend.vercel.app",
+                "chrome-extension://*"
             )
             .allowedMethods("GET", "POST", "OPTIONS")
             .allowedHeaders("*");
