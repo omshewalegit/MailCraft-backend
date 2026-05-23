@@ -16,4 +16,9 @@ public class EmailGeneratorController {
         String response = emailGeneratorService.generateEmailReply(emailRequest);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("pong");
+    }
 }
