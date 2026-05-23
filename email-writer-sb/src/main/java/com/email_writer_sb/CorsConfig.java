@@ -8,11 +8,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-            .allowedOrigins(
-                "http://localhost:5173",
-                "https://mail-craft-frontend.vercel.app",
-                "chrome-extension://*"
-            )
+            .allowedOriginPatterns("*")
             .allowedMethods("GET", "POST", "OPTIONS")
             .allowedHeaders("*");
     }
